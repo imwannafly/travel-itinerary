@@ -1,10 +1,16 @@
 // 여행 내용은 이 파일에 모아 둡니다. 코드를 몰라도, 저에게 변경할 내용을 말해 주시면 수정해 드려요.
 const trip = {
-  title: '다음 여행을 기다리며.', date: '날짜를 정해 주세요', subtitle: '동행과 함께 보는 우리의 여행 안내서',
-  introTitle: '아직 여행지를 정하는 중이에요.', introCopy: '여행지, 날짜, 항공편과 숙소 정보를 알려 주시면 이 공간을 우리만의 여행 안내서로 채워 드립니다.',
-  days: [{label:'DAY 1', date:'여행 첫날', items:[{time:'10:00',place:'출발 준비',note:'여행지와 출발 시간을 정해 주세요'},{time:'14:00',place:'첫 일정',note:'가고 싶은 장소를 알려 주세요'}]}],
-  transport: [{title:'항공편',detail:'항공편 정보를 입력해 주세요'},{title:'숙소',detail:'숙소 이름과 주소를 입력해 주세요'}],
-  budget: [{name:'항공',amount:0},{name:'숙소',amount:0},{name:'식비',amount:0},{name:'교통·입장료',amount:0}],
-  checklist:['여권 또는 신분증','항공권·숙소 예약 확인','충전기·보조배터리','편한 신발','상비약','현지 유심 또는 로밍']
+  title: '4박 5일 일본 여행', date: '11월 1일 — 11월 5일', subtitle: '도쿄와 후지산, 가와구치코를 만나는 가을 여행',
+  introTitle: '후지산의 가을에서 도쿄의 밤까지.', introCopy: '가와구치코의 호수와 단풍, 그리고 신주쿠의 활기를 담은 4박 5일 여행입니다. 일정은 상황에 맞춰 유연하게 바꿔요.',
+  days: [
+    {label:'DAY 1',date:'11월 1일 · 가와구치코',items:[{time:'10:45',place:'나리타 공항 도착',note:'입국 수속 및 렌터카 준비'},{time:'12:30',place:'나리타 공항 출발',note:'야마나카호 이동 · 약 2시간 30분~3시간, 휴게소에서 간단한 식사',url:'https://www.google.com/maps/search/?api=1&query=Narita+International+Airport'},{time:'16:00',place:'야마나카호',note:'호수 주변 관광',url:'https://www.google.com/maps/search/?api=1&query=Lake+Yamanaka'},{time:'18:00',place:'Fuji Sant',note:'체크인 · 휴식 및 정비',url:'https://maps.app.goo.gl/bCwgWascZ9SdH4Je9'},{time:'19:00',place:'저녁 식사',note:'미정 · 당일 상황에 맞춰 선택'},{time:'20:30',place:'숙소 주변 마트',note:'과일 또는 다음 날 아침거리 구매'}]},
+    {label:'DAY 2',date:'11월 2일 · 후지산',items:[{time:'기상',place:'가와구치코 주변',note:'간단한 관광 또는 조식'},{time:'10:00',place:'후지유라리 온천',note:'온천 이용',url:'https://www.google.com/maps/search/?api=1&query=Fujiyurari+Hot+Spring'},{time:'12:30',place:'점심 식사',note:'식당 미정'},{time:'14:00',place:'기타구치 혼구 후지 센겐 신사',note:'신사 관광',url:'https://www.google.com/maps/search/?api=1&query=Kitaguchi+Hongu+Fuji+Sengen+Shrine'},{time:'15:00',place:'유니클로 후지요시다점',note:'쇼핑',url:'https://www.google.com/maps/search/?api=1&query=UNIQLO+Fujiyoshida'},{time:'16:00',place:'가와구치코 호수',note:'호수 주변 관광',url:'https://www.google.com/maps/search/?api=1&query=Lake+Kawaguchi'}]},
+    {label:'DAY 3',date:'11월 3일 · 가와구치코 → 도쿄',items:[{time:'기상',place:'오이시 공원 · 단풍 회랑',note:'관광',url:'https://www.google.com/maps/search/?api=1&query=Oishi+Park+Kawaguchiko'},{time:'14:00',place:'니시신주쿠 닛폰렌터카',note:'차량 반납',url:'https://www.google.com/maps/search/?api=1&query=Nippon+Rent-A-Car+Nishi-Shinjuku'},{time:'14:30',place:'ドモ民泊',note:'얼리 체크인 가능 시 입실 · 불가 시 코인락커에 짐 보관',url:'https://maps.app.goo.gl/5bKUpVbpt3uPZgGYA'},{time:'오후',place:'하라주쿠 또는 아자부 힐즈',note:'당일 컨디션과 상황에 따라 결정'},{time:'17:00',place:'신주쿠 인근',note:'복귀 또는 숙소 휴식'},{time:'19:00',place:'저녁 식사',note:'미정'},{time:'21:00',place:'가부키초',note:'가볍게 둘러보기',url:'https://www.google.com/maps/search/?api=1&query=Kabukicho'}]},
+    {label:'DAY 4',date:'11월 4일 · 도쿄',items:[{time:'하루',place:'자유 일정',note:'가고 싶은 지역·맛집을 정하면 추가할 예정'}]},
+    {label:'DAY 5',date:'11월 5일 · 귀국',items:[{time:'오전',place:'체크아웃 · 마지막 자유 시간',note:'숙소에서 출발 전 여유 시간'},{time:'오후',place:'나리타 공항 이동',note:'출국 수속을 고려해 여유 있게 출발'},{time:'18:55',place:'나리타 NRT 출발',note:'LJ235 · 터미널 1'},{time:'21:40',place:'인천 ICN 도착',note:'터미널 2'}]}
+  ],
+  transport:[{title:'항공편 · LJ235',detail:'가는 편  인천 ICN T2 08:05 → 나리타 NRT T1 10:45\n오는 편  나리타 NRT T1 18:55 → 인천 ICN T2 21:40'},{title:'숙소 1 · Fuji Sant',detail:'11/1~11/3 · 2박\n4930 Katsuyama, Fujikawaguchiko, Yamanashi',url:'https://maps.app.goo.gl/bCwgWascZ9SdH4Je9'},{title:'숙소 2 · ドモ民泊',detail:'11/3~11/5 · 2박\nTokyo, Shinjuku City, Nishishinjuku 8 Chome−2−16 PATIO西新宿 101室',url:'https://maps.app.goo.gl/5bKUpVbpt3uPZgGYA'}],
+  budget:[{name:'항공',amount:0},{name:'숙소',amount:0},{name:'식비',amount:0},{name:'교통·입장료',amount:0}],
+  checklist:['휴대폰','여권','개인 여비','충전기·보조배터리','항공권·숙소 예약 확인','편한 신발','상비약','현지 유심 또는 로밍']
 };
 
