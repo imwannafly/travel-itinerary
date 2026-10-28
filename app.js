@@ -8,7 +8,7 @@ $('#transport').innerHTML=trip.transport.map(x=>`<div class="info-item"><strong>
 const total=trip.budget.reduce((a,b)=>a+b.amount,0);if($('#budget-total')){$('#budget-total').textContent=`₩${money(total)}`;$('#budget-list').innerHTML=trip.budget.map(x=>`<div class="budget-row"><span>${x.name}</span><strong>₩${money(x.amount)}</strong></div>`).join('');}
 const checks=JSON.parse(localStorage.getItem('trip-checks')||'{}');$('#checklist').innerHTML=trip.checklist.map((x,i)=>`<label class="check-item"><input type="checkbox" data-key="${i}" ${checks[i]?'checked':''}><span>${x}</span></label>`).join('');
 $('#checklist').onchange=e=>{checks[e.target.dataset.key]=e.target.checked;localStorage.setItem('trip-checks',JSON.stringify(checks))};
-```javascript
+
 // ===== WEATHER WIDGET =====
 (() => {
   const grid = document.getElementById('weather-grid');
