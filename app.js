@@ -73,7 +73,6 @@ try {
 } finally {
   clearTimeout(timeout);
 }
-    );
 
     if (!response.ok) {
       throw new Error('날씨 API 응답 오류');
