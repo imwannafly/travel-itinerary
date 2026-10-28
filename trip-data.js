@@ -11,6 +11,6 @@ const trip = {
   ],
   transport:[{title:'항공편 · LJ235',detail:'가는 편  인천 ICN T2 08:05 → 나리타 NRT T1 10:45\n오는 편  나리타 NRT T1 18:55 → 인천 ICN T2 21:40'},{title:'숙소 1 · Fuji Sant',detail:'11/1~11/3 · 2박\n4930 Katsuyama, Fujikawaguchiko, Yamanashi',url:'https://maps.app.goo.gl/bCwgWascZ9SdH4Je9'},{title:'숙소 2 · ドモ民泊',detail:'11/3~11/5 · 2박\nTokyo, Shinjuku City, Nishishinjuku 8 Chome−2−16 PATIO西新宿 101室',url:'https://maps.app.goo.gl/5bKUpVbpt3uPZgGYA'}],
   budget:[{name:'항공',amount:0},{name:'숙소',amount:0},{name:'식비',amount:0},{name:'교통·입장료',amount:0}],
-  checklist:['휴대폰','여권','개인 여비','충전기·보조배터리','항공권·숙소 예약 확인','편한 신발','상비약','현지 유심 또는 로밍']
+  checklist:['휴대폰','여권','국제운전면허증','개인 여비','충전기·보조배터리','돼지코','렌터카·호텔 예약 사본','항공권·숙소 예약 확인','편한 신발','상비약','현지 유심 또는 로밍']
 };
 
