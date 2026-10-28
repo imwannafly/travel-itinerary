@@ -57,9 +57,22 @@ $('#checklist').onchange=e=>{checks[e.target.dataset.key]=e.target.checked;local
       timezone: 'Asia/Tokyo'
     });
 
-    const response = await fetch(
-      `https://api.open-meteo.com/v1/forecast?${params}`,
-      { cache: 'no-store' }
+  const controller = new AbortController();
+const timeout = setTimeout(() => controller.abort(), 10000);
+
+let response;
+
+try {
+  response = await fetch(
+    `https://api.open-meteo.com/v1/forecast?${params}`,
+    {
+      cache: 'no-store',
+      signal: controller.signal
+    }
+  );
+} finally {
+  clearTimeout(timeout);
+}
     );
 
     if (!response.ok) {
