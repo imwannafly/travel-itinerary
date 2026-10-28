@@ -185,4 +185,3 @@ $('#checklist').onchange=e=>{checks[e.target.dataset.key]=e.target.checked;local
   // 30분마다 예보 갱신
   setInterval(loadWeather, 30 * 60 * 1000);
 })();
-```
