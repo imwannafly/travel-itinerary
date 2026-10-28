@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hero { background-image: linear-gradient(110deg, rgba(12,30,26,.7), rgba(12,30,26,.18)), url('https://images.unsplash.com/photo-1701589201242-8120bb9e2fd1?auto=format&fit=crop&w=1800&q=85'); }
+    .two-columns.single-column { grid-template-columns: minmax(0, 1fr); }
+  </style>
 </head>
 <body>
   <header class="hero">
@@ -34,16 +38,11 @@
       <div class="schedule-card" id="schedule"></div>
     </section>
 
-    <section class="section two-columns">
+    <section class="section two-columns single-column">
       <div>
         <p class="section-kicker">STAY &amp; FLIGHT</p>
         <h2>이동과 숙소</h2>
         <div class="info-stack" id="transport"></div>
-      </div>
-      <div>
-        <p class="section-kicker">BUDGET</p>
-        <h2>예상 경비</h2>
-        <div class="budget-card"><p class="budget-total" id="budget-total">₩0</p><p>1인 기준 예상 금액</p><div id="budget-list"></div></div>
       </div>
     </section>
 
